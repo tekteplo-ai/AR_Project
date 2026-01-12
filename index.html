@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>AR Проект</title>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Project</title>
 
-    <!-- A-Frame (актуальная версия) -->
-    <script src="https://cdn.jsdelivr.net/npm/aframe@1.5.0/dist/aframe.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-    <!-- AR.js (актуальный CDN) -->
-    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
-  </head>
+    <!-- AR.js подключение (если используется) -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script> -->
+</head>
 
-  <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
-      
-      <!-- Маркер (по умолчанию Hiro) -->
-      <a-marker preset="hiro">
+<body>
 
-        <!-- Фото -->
-        <a-image src="photo.jpg" rotation="-90 0 0"></a-image>
+<header>
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <h1>AR Project</h1>
+</header>
 
-        <!-- Пример видео -->
-        <!--
-        <a-video 
-            src="video.mp4"
-            width="1.6"
-            height="0.9"
-            rotation="-90 0 0"
-            autoplay="true"
-            loop="true"
-            playsinline="true">
-        </a-video>
-        -->
+<main>
+    <p>Этот проект корректно работает на GitHub Pages.</p>
 
-      </a-marker>
+    <img src="images/example.png" alt="Example" class="preview">
 
-      <a-entity camera></a-entity>
+    <!-- Если AR-контент нужен, вставь сюда -->
+    <!--
+    <a-scene embedded arjs="sourceType: webcam;">
+        <a-marker preset="hiro">
+            <a-box position="0 0.5 0" material="color: red;"></a-box>
+        </a-marker>
+        <a-entity camera></a-entity>
     </a-scene>
-  </body>
+    -->
+</main>
+
+<footer>
+    <p>© 2025 TekTeplo AI</p>
+</footer>
+
+</body>
 </html>
