@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AR Проект</title>
+
+    <!-- A-Frame (актуальная версия) -->
+    <script src="https://cdn.jsdelivr.net/npm/aframe@1.5.0/dist/aframe.min.js"></script>
+
+    <!-- AR.js (актуальный CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      
+      <!-- Маркер (по умолчанию Hiro) -->
+      <a-marker preset="hiro">
+
+        <!-- Фото -->
+        <a-image src="photo.jpg" rotation="-90 0 0"></a-image>
+
+        <!-- Пример видео -->
+        <!--
+        <a-video 
+            src="video.mp4"
+            width="1.6"
+            height="0.9"
+            rotation="-90 0 0"
+            autoplay="true"
+            loop="true"
+            playsinline="true">
+        </a-video>
+        -->
+
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
